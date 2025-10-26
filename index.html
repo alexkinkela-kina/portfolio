@@ -1,36 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alex Kinkela | Portfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Alex Kinkela — Web Developer</title>
   <style>
-    body { font-family: Arial, sans-serif; margin:0; background:#e7f1ff; color:#003366; text-align:center; }
-    header { background:#0055cc; color:white; padding:20px; }
-    nav a { margin:10px; text-decoration:none; color:white; font-weight:bold; padding:8px 12px; border-radius:6px; background:#0077ff; }
-    nav a:hover { background:#0055cc; }
-    .avatar { width:150px; height:150px; border-radius:50%; background:#cce0ff; display:inline-block; margin:20px auto; }
-    main { padding:20px; }
-    footer { margin-top:30px; padding:10px; background:#003366; color:white; }
+    :root{
+      --bg:#0b0f14; --card:#0f1720; --accent:#0ea5ff; --muted:#94a3b8; --glass: rgba(255,255,255,0.03);
+      --radius:12px; --max:1100px; font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,#051017 0%,#07121a 100%);color:#e6eef6}
+    .wrap{max-width:var(--max);margin:36px auto;padding:28px}
+    header{display:flex;align-items:center;gap:20px}
+    .avatar{width:84px;height:84px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;font-weight:700;color:#021025}
+    h1{margin:0;font-size:28px}
+    p.lead{margin:6px 0 0;color:var(--muted)}
+    .actions{margin-left:auto}
+    .btn{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:8px 12px;border-radius:10px;color:var(--accent);text-decoration:none;font-weight:600}
+
+    .grid{display:grid;grid-template-columns:1fr 340px;gap:24px;margin-top:28px}
+    .card{background:linear-gradient(180deg,var(--card),#0b1620);padding:18px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+
+    .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .proj{background:var(--glass);padding:14px;border-radius:10px;display:flex;gap:12px;align-items:center}
+    .proj img{width:86px;height:64px;object-fit:cover;border-radius:8px}
+    .proj h3{margin:0;font-size:16px}
+    .proj p{margin:6px 0 0;color:var(--muted);font-size:13px}
+    .proj a{margin-left:auto;background:linear-gradient(90deg,var(--accent),#7c3aed);padding:8px 10px;border-radius:8px;color:#021025;text-decoration:none;font-weight:700}
+
+    aside .info{display:flex;flex-direction:column;gap:10px}
+    .meta{color:var(--muted);font-size:13px}
+    footer{margin-top:28px;text-align:center;color:var(--muted);font-size:13px}
+
+    @media (max-width:900px){.grid{grid-template-columns:1fr}.projects{grid-template-columns:1fr}.actions{margin-left:0}}
   </style>
 </head>
 <body>
-  <header>
-    <h1>Alex Kinkela</h1>
-    <p>Junior Web Developer | Visual Web Projects | Freelancing in Denmark</p>
-  </header>
-  <div class="avatar"></div>
-  <main>
-    <h2>My Projects</h2>
-    <nav>
-      <a href="multimedia-player.html">Multimedia Player</a>
-      <a href="recipe.html">Recipe Page</a>
-      <a href="homepage.html">Simple Homepage</a>
-    </nav>
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:alexkinkela@gmail.com">alexkinkela@gmail.com</a></p>
-    <p><a href="https://github.com/alexkinkela-kina" target="_blank">GitHub Profil</a></p>
-  </main>
-  <footer>Designed &amp; Built by Alex</footer>
+  <div class="wrap">
+    <header>
+      <div class="avatar">AK</div>
+      <div>
+        <h1>Alex Kinkela — Web Developer</h1>
+        <p class="lead">Početnik web developer, fokusiran na vizualne projekte i freelancing. Svakodnevno se educiram i trenutno učim JavaScript.</p>
+      </div>
+      <div class="actions">
+        <a class="btn" href="mailto:alexkinkela@gmail.com">Contact</a>
+      </div>
+    </header>
+
+    <div class="grid">
+      <main class="card">
+        <h2 style="margin-top:0">Projects</h2>
+        <p class="meta">Below are sample projects (HTML-only examples). I can add interactive JavaScript versions later.</p>
+
+        <div class="projects" style="margin-top:12px">
+          <article class="proj">
+            <img src="https://cdn.freecodecamp.org/curriculum/labs/recipe.jpg" alt="Recipe sample">
+            <div>
+              <h3>Recipe Page</h3>
+              <p>A clean recipe layout demonstrating HTML structure and semantic elements.</p>
+            </div>
+            <a href="recipe.html" aria-label="Open Recipe project">Open</a>
+          </article>
+
+          <article class="proj">
+            <img src="https://cdn.freecodecamp.org/curriculum/js-music-player/sailing-away.mp3" alt="Multimedia sample">
+            <div>
+              <h3>Multimedia Player</h3>
+              <p>Audio and video examples with transcript and subtitles.</p>
+            </div>
+            <a href="multimedia-player.html" aria-label="Open Multimedia project">Open</a>
+          </article>
+
+          <article class="proj">
+            <img src="https://cdn.freecodecamp.org/curriculum/labs/rise-beyond-2.png" alt="Movie review sample">
+            <div>
+              <h3>Movie Review</h3>
+              <p>Poster-style review page showing image assets and ratings.</p>
+            </div>
+            <a href="movie.html" aria-label="Open Movie Review project">Open</a>
+          </article>
+
+          <article class="proj">
+            <img src="https://cdn.freecodecamp.org/curriculum/labs/cube.jpg" alt="Checkout sample">
+            <div>
+              <h3>Checkout Page</h3>
+              <p>Form elements and accessibility-focused checkout prototype.</p>
+            </div>
+            <a href="checkout.html" aria-label="Open Checkout project">Open</a>
+          </article>
+
+        </div>
+
+        <section style="margin-top:18px">
+          <h3 style="margin:0">About this portfolio</h3>
+          <p class="meta">Built as a clean, modern dark portfolio to showcase HTML and early frontend work. More projects (JavaScript/React) will be added.</p>
+        </section>
+
+      </main>
+
+      <aside class="card">
+        <div class="info">
+          <div>
+            <strong>Contact</strong>
+            <p class="meta">alexkinkela@gmail.com</p>
+            <p class="meta">GitHub: <a href="https://github.com/alexkinkela-kina" style="color:var(--accent);text-decoration:none">alexkinkela-kina</a></p>
+          </div>
+
+          <div>
+            <strong>Skills</strong>
+            <p class="meta">HTML • CSS • Responsive design • Visual layout</p>
+          </div>
+
+          <div>
+            <strong>Availability</strong>
+            <p class="meta">Freelance — part-time (evenings)</p>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      Designed &amp; Built by Alex
+    </footer>
+  </div>
 </body>
 </html>
