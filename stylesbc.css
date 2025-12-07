@@ -1,0 +1,59 @@
+/* 4, 5 – boja pozadine i font */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rosybrown;
+  font-family: Arial, sans-serif;
+}
+
+/* 6 – p elementi top/bottom margin 5px */
+p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+/* 7 – linkovi bez podcrtavanja */
+a {
+  text-decoration: none;
+}
+
+/* 8–15 – .business-card stilovi */
+.business-card {
+  width: 300px;              /* 9 */
+  background-color: #fffaf4; /* 10 – bilo koja validna boja */
+  padding: 20px;             /* 11 */
+  margin-top: 100px;         /* 12 */
+  margin-left: auto;         /* 15 */
+  margin-right: auto;        /* 15 */
+  text-align: center;        /* 13 */
+  font-size: 16px;           /* 14 */
+
+  /* malo estetike – nije uvjet za test */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* 19 – slika max širina 100% */
+.profile-image {
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+/* čisto da portfolio izgleda kao gumb */
+.portfolio-link {
+  display: inline-block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* social media blok */
+.social-media {
+  margin-top: 15px;
+}
+
+.social-media a {
+  display: inline-block;
+  margin: 0 5px;
+  font-size: 14px;
+}
+
